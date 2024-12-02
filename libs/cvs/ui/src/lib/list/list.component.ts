@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'lib-cvs-ui',
+  selector: 'lib-list',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './cvs-ui.component.html',
-  styleUrl: './cvs-ui.component.css',
+  templateUrl: './list.component.html',
+  styleUrl: './list.component.css',
 })
-export class CvsUiComponent {}
+export class ListComponent {}

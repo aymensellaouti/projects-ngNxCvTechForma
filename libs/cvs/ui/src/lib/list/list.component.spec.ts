@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { CvsUiComponent } from './cvs-ui.component';
+import { ListComponent } from './list.component';
 
-describe('CvsUiComponent', () => {
-  let component: CvsUiComponent;
-  let fixture: ComponentFixture<CvsUiComponent>;
+describe('ListComponent', () => {
+  let component: ListComponent;
+  let fixture: ComponentFixture<ListComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CvsUiComponent],
+      imports: [ListComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(CvsUiComponent);
+    fixture = TestBed.createComponent(ListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
