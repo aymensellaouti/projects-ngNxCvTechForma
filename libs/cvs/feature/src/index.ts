@@ -1,1 +1,1 @@
-export * from './lib/cvs-feature/cvs-feature.component';
+export * from './lib/cv/cv.component';
