@@ -1,1 +1,8 @@
-<p>cv works!</p>
+<div class="row">
+  <div class="col">
+    <lib-list (forwardCv)="onForwardCv($event)" [cvs]="cvs$ | async"></lib-list>
+  </div>
+  <div class="col">
+    <lib-card [cv]="selectedCv"></lib-card>
+  </div>
+</div>

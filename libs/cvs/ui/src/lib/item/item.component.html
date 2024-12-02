@@ -1,1 +1,10 @@
-<p>item works!</p>
+<!-- eslint-disable @angular-eslint/template/interactive-supports-focus -->
+<!-- eslint-disable @angular-eslint/template/click-events-have-key-events -->
+
+<div (click)="onSelectCv()">
+  <img [ngStyle]="{
+      width: size + 'px',
+      heigth: size + 'px'
+    }" class="rounded-circle" src="images/{{cv?.path ?? '' | defaultImage}}" alt="{{cv?.name}}">
+  {{cv?.firstname}} {{cv?.name}}
+</div>

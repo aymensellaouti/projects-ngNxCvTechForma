@@ -1,1 +1,1 @@
-export * from './lib/ui/ui.component';
+export * from './lib/pipes/default-image.pipe';
