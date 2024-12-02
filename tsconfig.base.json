@@ -16,9 +16,11 @@
     "baseUrl": ".",
     "paths": {
       "@ng-nx-cv-tech-forma/cvs": ["libs/cvs/src/index.ts"],
+      "@ng-nx-cv-tech-forma/cvs-domain": ["libs/cvs/domain/src/index.ts"],
       "@ng-nx-cv-tech-forma/cvs-feature": ["libs/cvs/feature/src/index.ts"],
       "@ng-nx-cv-tech-forma/cvs-ui": ["libs/cvs/ui/src/index.ts"],
       "@ng-nx-cv-tech-forma/sahred-types": ["libs/shared/types/src/index.ts"],
+      "@ng-nx-cv-tech-forma/shared-config": ["libs/shared/config/src/index.ts"],
       "@ng-nx-cv-tech-forma/todo": ["libs/todo/src/index.ts"],
       "@ng-nx-cv-tech-forma/ui": ["libs/shared/ui/src/index.ts"],
       "@ng-nx-cv-tech-forma/utils": ["libs/shared/utils/src/index.ts"]
