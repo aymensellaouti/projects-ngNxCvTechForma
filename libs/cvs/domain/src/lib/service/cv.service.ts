@@ -1,22 +1,24 @@
 import { Injectable, inject } from "@angular/core";
 
-import { Observable } from "rxjs";
+import { Observable, Subject } from "rxjs";
 import { HttpClient, HttpParams } from "@angular/common/http";
 import {API} from '@ng-nx-cv-tech-forma/shared-config';
 import { Cv } from "../model/cv.model";
 
 @Injectable({
-  providedIn: "root",
+  providedIn: 'root',
 })
 export class CvService {
   private http = inject(HttpClient);
 
   private cvs: Cv[] = [];
+  #selectCvSuject$ = new Subject<Cv>();
+  selectCv$ = this.#selectCvSuject$.asObservable();
 
   constructor() {
     this.cvs = [
-      new Cv(1, "aymen", "sellaouti", "teacher", "as.jpg", "1234", 40),
-      new Cv(2, "skander", "sellaouti", "enfant", "       ", "1234", 4),
+      new Cv(1, 'aymen', 'sellaouti', 'teacher', 'as.jpg', '1234', 40),
+      new Cv(2, 'skander', 'sellaouti', 'enfant', '       ', '1234', 4),
     ];
   }
 
@@ -50,8 +52,8 @@ export class CvService {
    * @returns CV[]
    *
    */
-  deleteCvById(id: number): Observable<{count: number}> {
-    return this.http.delete<{count: number}>(API.cv + id);
+  deleteCvById(id: number): Observable<{ count: number }> {
+    return this.http.delete<{ count: number }>(API.cv + id);
   }
 
   addCv(cv: Cv): Observable<Cv> {
@@ -104,7 +106,7 @@ export class CvService {
    */
   selectByName(name: string) {
     const search = `{"where":{"name":{"like":"%${name}%"}}}`;
-    const params = new HttpParams().set("filter", search);
+    const params = new HttpParams().set('filter', search);
     return this.http.get<any>(API.cv, { params });
   }
   /**
@@ -115,7 +117,11 @@ export class CvService {
    */
   selectByProperty(property: string, value: string) {
     const search = `{"where":{"${property}":"${value}"}}`;
-    const params = new HttpParams().set("filter", search);
+    const params = new HttpParams().set('filter', search);
     return this.http.get<Cv[]>(API.cv, { params });
+  }
+
+  selectCv(cv: Cv) {
+    this.#selectCvSuject$.next(cv);
   }
 }
