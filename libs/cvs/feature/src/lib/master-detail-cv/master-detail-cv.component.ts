@@ -12,7 +12,6 @@ import { Observable } from "rxjs";
     styleUrls: ['./master-detail-cv.component.css'],
     standalone: true,
     imports: [
-        NgIf,
         ListComponent,
         RouterOutlet,
         AsyncPipe,
