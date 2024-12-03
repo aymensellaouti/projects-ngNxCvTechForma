@@ -1,4 +1,4 @@
-import { NgIf, AsyncPipe } from "@angular/common";
+import { AsyncPipe } from "@angular/common";
 import { Component, inject } from "@angular/core";
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { RouterOutlet, Router, ActivatedRoute } from "@angular/router";

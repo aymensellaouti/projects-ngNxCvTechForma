@@ -25,7 +25,7 @@ export class DetailsCvComponent {
   router = inject(Router);
   cv$ = this.acr.params.pipe(
       switchMap((params) => this.cvService.getCvById(params['id'])),
-      catchError((e) => {
+      catchError(() => {
         this.router.navigate([APP_ROUTES.cv]);
         return EMPTY;
       })
