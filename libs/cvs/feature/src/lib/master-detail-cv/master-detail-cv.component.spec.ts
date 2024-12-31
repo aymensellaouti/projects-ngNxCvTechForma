@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MasterDetailCvComponent } from './master-detail-cv.component';
+import { provideHttpClient } from '@angular/common/http';
+import { provideRouter } from '@angular/router';
 
 describe('MasterDetailCvComponent', () => {
   let component: MasterDetailCvComponent;
@@ -8,7 +10,8 @@ describe('MasterDetailCvComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-    imports: [MasterDetailCvComponent]
+    imports: [MasterDetailCvComponent],
+    providers: [provideHttpClient(), provideRouter([])]
 })
     .compileComponents();
 

@@ -7,8 +7,6 @@ import { Cv } from '../model/cv';
 export class EmbaucheService {
   private embauchees: Cv[] = [];
 
-  constructor() {}
-
   /**
    *
    * Retourne la liste des embauchees

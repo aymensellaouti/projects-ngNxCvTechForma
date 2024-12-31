@@ -1,14 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { NxWelcomeComponent } from './nx-welcome.component';
+import { ListComponent } from '@ng-nx-cv-tech-forma/cvs-ui';
+import { Cv, CvService } from '@ng-nx-cv-tech-forma/cvs-domain';
 
 @Component({
   standalone: true,
-  imports: [NxWelcomeComponent, RouterModule],
+  imports: [ListComponent, RouterModule],
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
 export class AppComponent {
+  cvService = inject(CvService);
+  cvs: Cv[] = this.cvService.getFakeCvs();
   title = 'cvViewer';
 }
