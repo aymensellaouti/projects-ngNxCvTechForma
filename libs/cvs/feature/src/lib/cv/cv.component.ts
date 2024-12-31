@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ListComponent, CardComponent } from '@ng-nx-cv-tech-forma/cvs-ui';
 import { Cv, CvService } from '@ng-nx-cv-tech-forma/cvs-domain';
 import { catchError, Observable, of } from 'rxjs';
+import { User } from '@ng-nx-cv-tech-forma/sahred-types';
 @Component({
   selector: 'lib-cv',
   standalone: true,
@@ -11,6 +12,7 @@ import { catchError, Observable, of } from 'rxjs';
   styleUrl: './cv.component.css',
 })
 export class CvComponent {
+  connectedUser: User | null = null;
   cvService = inject(CvService);
   cvs$: Observable<Cv[]> = this.cvService.getCvs()
     .pipe(

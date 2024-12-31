@@ -1,1 +1,1 @@
-export * from './lib/sahred-types/sahred-types.component';
+export * from './lib/user.model';
