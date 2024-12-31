@@ -19,3 +19,8 @@ export const cvRoutes: Routes = [
   },
   {path: 'add', component: AddCvComponent},
 ]
+
+export * from './lib/add-cv/add-cv.component';
+export * from './lib/cv/cv.component';
+export * from './lib/details-cv/details-cv.component';
+export * from './lib/master-detail-cv/master-detail-cv.component';

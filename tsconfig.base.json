@@ -1,6 +1,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "strict": true,
     "rootDir": ".",
     "sourceMap": true,
     "declaration": false,
@@ -15,7 +16,6 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@ng-nx-cv-tech-forma/cvs": ["libs/cvs/src/index.ts"],
       "@ng-nx-cv-tech-forma/cvs-domain": ["libs/cvs/domain/src/index.ts"],
       "@ng-nx-cv-tech-forma/cvs-feature": ["libs/cvs/feature/src/index.ts"],
       "@ng-nx-cv-tech-forma/cvs-ui": ["libs/cvs/ui/src/index.ts"],
